@@ -1,0 +1,23 @@
+{
+  "name": "pg-share-webpack-2016",
+  "version": "1.0.0",
+  "description": "Demo for webpack internal sharing",
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack-dev-server"
+  },
+  "keywords": [
+    "webpack",
+    "demo"
+  ],
+  "author": "Ferrari <shiyung@positivegrid.com>",
+  "private": true,
+  "devDependencies": {
+    "css-loader": "^0.23.1",
+    "html-webpack-plugin": "^1.7.0",
+    "style-loader": "^0.13.0",
+    "webpack": "^1.12.9",
+    "webpack-dev-server": "^1.14.0",
+    "webpack-merge": "^0.7.1"
+  }
+}
