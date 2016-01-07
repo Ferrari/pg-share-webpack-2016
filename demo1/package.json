@@ -1,5 +1,5 @@
 {
-  "name": "pg-share-webpack-2016",
+  "name": "pg-share-webpack-2016-demo1",
   "version": "1.0.0",
   "description": "Demo for webpack internal sharing",
   "scripts": {
