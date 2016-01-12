@@ -64,3 +64,56 @@ function fetchStarred(login, nextPageUrl) {
     }
   }
 }
+
+export function loadStarred(login, nextPage) {
+  return (dispatch, getState) => {
+    const {
+      nextPageUrl = `users/${login}/starred`,
+      pageCount = 0
+    } = getState().pagination.starredByUser[login] || {}
+
+    if (pageCount > 0 && !nextPage) {
+      return null
+    }
+
+    return dispatch(fetchStarred(login, nextPageUrl))
+  }
+}
+
+export const STARGAZERS_REQUEST = 'STARGAZERS_REQUEST'
+export const STARGAZERS_SUCCESS = 'STARGAZERS_SUCCESS'
+export const STARGAZERS_FAILURE = 'STARGAZERS_FAILURE'
+
+function fetchStargazers(fullName, nextPageUrl) {
+  return {
+    fullName,
+    [CALL_API]: {
+      types: [ STARGAZERS_REQUEST, STARGAZERS_SUCCESS, STARGAZERS_FAILURE ],
+      endpoint: nextPageUrl,
+      schema: Schemas.USER_ARRAY
+    }
+  }
+}
+
+export function loadStargazers(fullName, nextPage) {
+  return (dispatch, getState) => {
+    const {
+      nextPageUrl = `repos/${fullName}/stargazers`,
+      pageCount = 0
+    } = getState().pagination.stargazersByRepo[fullName] || {}
+
+    if (pageCount > 0 && !nextPage) {
+      return null
+    }
+
+    return dispatch(fetchStargazers(fullName, nextPageUrl))
+  }
+}
+
+export const RESET_ERROR_MESSAGE = 'RESET_ERROR_MESSAGE'
+
+export function resetErrorMessage() {
+  return {
+    type: RESET_ERROR_MESSAGE
+  }
+}
