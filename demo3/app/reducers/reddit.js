@@ -39,7 +39,7 @@ function posts(state = {
   }
 }
 
-const postsByReddit(state = { }, action) {
+function postsByReddit(state = { }, action) {
   switch(action.type) {
     case INVALIDATE_REDDIT:
     case RECEIVE_POSTS:
