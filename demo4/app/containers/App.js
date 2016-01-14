@@ -40,7 +40,7 @@ class App extends Component {
   }
 
   render() {
-    const { children, inputValue } from this.props
+    const { children, inputValue } = this.props
     return (
       <div>
         <Explore value={inputValue}

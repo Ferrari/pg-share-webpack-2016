@@ -33,13 +33,19 @@
     "webpack-merge": "^0.7.1"
   },
   "dependencies": {
+    "history": "^1.17.0",
+    "humps": "^1.0.0",
     "isomorphic-fetch": "^2.2.0",
+    "lodash": "^4.0.0",
+    "normalizr": "^2.0.0",
     "react": "^0.14.6",
     "react-bootstrap": "^0.28.2",
     "react-dom": "^0.14.6",
     "react-redux": "^4.0.6",
+    "react-router": "^1.0.3",
     "redux": "^3.0.5",
     "redux-logger": "^2.3.1",
+    "redux-router": "^1.0.0-beta7",
     "redux-thunk": "^1.0.3"
   }
 }
