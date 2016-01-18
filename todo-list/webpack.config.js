@@ -36,7 +36,8 @@ var common = {
     new HtmlWebpackPlugin({
       template: 'node_modules/html-webpack-template/index.html',
       title: 'Hello Webpack',
-      appMountId: 'app'
+      appMountId: 'app',
+      hash: true
     })
   ]
 };

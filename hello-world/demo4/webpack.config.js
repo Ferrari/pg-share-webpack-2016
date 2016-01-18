@@ -16,7 +16,7 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /\.jsx?$/,
+        test: /\.(js|jsx)$/,
         loader: 'babel-loader',
         exclude: [moduleDir],
         query: {
