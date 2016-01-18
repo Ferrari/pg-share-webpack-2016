@@ -12,5 +12,12 @@ export function es6Component() {
   content.appendChild(buttonText());
   container.appendChild(content);
 
+  let image = document.createElement('img');
+  image.src = require('./asset/small.png');
+  container.appendChild(image);
+  let large = document.createElement('img');
+  large.src = require('./asset/large.png');
+  container.appendChild(large);
+
   return container;
 }

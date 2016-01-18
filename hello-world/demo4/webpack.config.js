@@ -1,6 +1,8 @@
 var webpack = require('webpack');
 var path = require('path');
+
 var bootstrapCss = path.join(__dirname, '../node_modules/bootstrap/dist/css');
+var moduleDir = path.join(__dirname, '../node_modules');
 
 module.exports = {
   entry: {
@@ -8,6 +10,7 @@ module.exports = {
   },
   output: {
     path: './build',
+    publicPath: '/build/',
     filename: '[name].js'
   },
   module: {
@@ -15,6 +18,7 @@ module.exports = {
       {
         test: /\.jsx?$/,
         loader: 'babel-loader',
+        exclude: [moduleDir],
         query: {
           presets: ['es2015']
         }
@@ -25,7 +29,7 @@ module.exports = {
       },
       {
         test: /\.(png|jpg)$/,
-        loader: 'url-loader?limit=8192'
+        loader: 'url-loader?limit=18192'
       },
       { 
         test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, 
