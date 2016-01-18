@@ -1,10 +1,10 @@
 {
-  "name": "pg-share-webpack-2016-demo1",
+  "name": "pg-share-webpack-2016-demo4",
   "version": "1.0.0",
   "description": "Demo for webpack internal sharing",
   "scripts": {
     "build": "webpack --progress",
-    "start": "webpack-dev-server"
+    "start": "../node_modules/.bin/webpack-dev-server"
   },
   "keywords": [
     "webpack",

@@ -64,5 +64,10 @@ module.exports = {
       '../node_modules',
       bootstrapCss
     ]
+  },
+  devServer: {
+    contentBase: __dirname,
+    hot: true,
+    progress: true
   }
 };
